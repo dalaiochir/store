@@ -1,0 +1,1 @@
+export default function Footer(){return <footer className="footer"><div><h3>MK Commerce</h3><p>Premium products, clean shopping experience.</p></div><div><p>© 2026 MK Commerce</p><p>Ulaanbaatar, Mongolia</p></div></footer>}
