@@ -16,12 +16,12 @@ export default function Header(){
  },[]);
  const handleLogout=()=>{ logout(); setUser(null); };
  return <header className="header">
-  <Link className="logo" href="/">MK<span>Commerce</span></Link>
-  <nav><Link href="/products">Products</Link>{user?.role==='admin'&&<Link href="/admin">Admin</Link>}</nav>
-  <form className="headerSearch" action="/products"><input name="q" placeholder="Search products" aria-label="Search products" /></form>
+  <Link className="logo" href="/"><span>STORA</span> STYLE</Link>
+  <nav><Link href="/products">Бараа</Link><Link href="/cart">Сагс</Link>{user?.role==='admin'&&<Link href="/admin">Admin</Link>}</nav>
+  <form className="headerSearch" action="/products"><input name="q" placeholder="Бараа хайх" aria-label="Search products" /></form>
   <div className="headerActions">
-   <Link className="cartLink" href="/cart" aria-label="Cart">Cart <b>{count}</b></Link>
-   {user ? <div className="userMenu"><span>{user.name} <em>{user.role}</em></span><button type="button" className="ghost smallBtn" onClick={handleLogout}>Logout</button></div> : <Link className="loginLink" href="/login">Login</Link>}
+   <Link className="cartLink" href="/cart" aria-label="Cart">🛒 <b>{count}</b></Link>
+   {user ? <div className="userMenu"><span>{user.name} <em>{user.role}</em></span><button type="button" className="ghost smallBtn" onClick={handleLogout}>Logout</button></div> : <Link className="loginLink" href="/login">Нэвтрэх</Link>}
   </div>
  </header>
 }
